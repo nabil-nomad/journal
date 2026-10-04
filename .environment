@@ -1,4 +1,2 @@
-# Updates PATH when Poetry is used, making it available during deploys, start commands, and SSH.
-if [ -n "$POETRY_VERSION" ]; then
-    export PATH="/app/.local/bin:$PATH"
-fi
+# Puts the project virtualenv created by uv on PATH for deploys, start commands, and SSH.
+export PATH="/app/.venv/bin:$PATH"
